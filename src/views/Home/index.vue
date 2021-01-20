@@ -16,6 +16,46 @@
         <input type="text" placeholder="Shorten a link here...">
         <button class="button-cyan">Shorten It!</button>
       </div>
+
+      <div class="statistics">
+        <h1>Advanced Statistics</h1>
+        <p>
+          Track how your links are performing across the web with <br/>
+          our advanced statistics dashboard.
+        </p>
+
+        <div class="cards">
+          <div class="brand">
+            <img src="../../assets/images/icons/icon-brand-recognition.svg" alt="">
+
+            <h5>Brand Recognition</h5>
+            <p>
+              Boost your brand recognition with each click. Generic links don't
+              mean a thing. Branded links help instil confidence in your content.
+            </p>
+          </div>
+
+          <div class="records">
+            <img src="../../assets/images/icons/icon-detailed-records.svg" alt="">
+
+            <h5>Detailed Records</h5>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and 
+              where people engage with your content helps inform better decisions.
+            </p>
+          </div>
+
+          <div class="customizable">
+            <img src="../../assets/images/icons/icon-fully-customizable.svg" alt="">
+
+            <h5>Fully Customizable</h5>
+            <p>
+              Improve brand awareness and content discoverability through customizable
+              links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -61,6 +101,7 @@ export default {
   }
 
   .main {
+    position: relative;
     .input {
       background: {
         image: url("../../assets/images/bg-shorten-desktop.svg");
@@ -74,6 +115,8 @@ export default {
       justify-content: space-evenly;
       padding: 50px 30px;
       border-radius: 6px;
+      position: relative;
+      z-index: 10;
 
       input {
         width: 80%;
@@ -81,7 +124,7 @@ export default {
         border-radius: 6px;
         border: none;
         @include font("Poppins Bold");
-
+        //TODO descobrir como usar o mixin placeholder
         &::placeholder {
           @include font("Poppins Bold");
           color: $grayish-violet;
@@ -90,6 +133,30 @@ export default {
       button {
         padding: 12px 26px;
         border-radius: 6px;
+      }
+    }
+
+    .statistics {
+      text-align: center;
+      padding: 115px 0;
+      background: #efefef;
+      width: 100vw;
+      position: absolute;
+      left: calc(50% - 50vw);
+      top: 50%;
+      z-index: 1;
+      h1 {
+        @include font("Poppins Bold");
+      }
+      p {
+        color: $gray;
+      }
+
+      .cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
       }
     }
   }
