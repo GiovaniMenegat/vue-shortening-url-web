@@ -1,0 +1,17 @@
+@import "../core/mixins";
+
+.button-cyan {
+    background: $cyan;
+    color: #fff !important;
+    padding: 7px 15px;
+    border-radius: 50px;
+    border: none;
+    @include font("Poppins Black");
+    transition: 0.3s;
+    
+    &:hover {
+        /* opacity: 0.6; */
+        background-color: #9DE2E0;
+        color: #fff;
+    }
+}

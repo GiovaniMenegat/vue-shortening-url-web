@@ -6,6 +6,7 @@ module.exports = {
                 `
                 @import "@/styles/core/_settings.scss";
                 @import "@/styles/layout/_globals.scss";
+                @import "@/styles/layout/_buttons.scss";
                 @import "@/styles/core/_fonts.scss";
                 @import "@/styles/core/_mixins.scss";
                 `
