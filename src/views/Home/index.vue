@@ -26,7 +26,10 @@
 
         <div class="cards">
           <div class="brand">
-            <img src="../../assets/images/icons/icon-brand-recognition.svg" alt="">
+            <div class="circle">
+              <img src="../../assets/images/icons/icon-brand-recognition.svg" alt="">
+            </div>
+            
 
             <h5>Brand Recognition</h5>
             <p>
@@ -34,9 +37,12 @@
               mean a thing. Branded links help instil confidence in your content.
             </p>
           </div>
-
+          <svg width="50" height="200"><line x1="0" y1="150" x2="50" y2="150" style="stroke:rgb(41,199,199);stroke-width:6"/></svg>
           <div class="records">
-            <img src="../../assets/images/icons/icon-detailed-records.svg" alt="">
+            <div class="circle">
+              <img src="../../assets/images/icons/icon-detailed-records.svg" alt="">
+            </div>
+            
 
             <h5>Detailed Records</h5>
             <p>
@@ -44,9 +50,12 @@
               where people engage with your content helps inform better decisions.
             </p>
           </div>
-
+          <svg width="50" height="200"><line x1="0" y1="150" x2="50" y2="150" style="stroke:rgb(41,199,199);stroke-width:6"/></svg>
           <div class="customizable">
-            <img src="../../assets/images/icons/icon-fully-customizable.svg" alt="">
+            <div class="circle">
+              <img src="../../assets/images/icons/icon-fully-customizable.svg" alt="">
+            </div>
+            
 
             <h5>Fully Customizable</h5>
             <p>
@@ -155,8 +164,54 @@ export default {
       .cards {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-top: 50px;
+        justify-content: center;
+        margin-top: 100px;
+        position: relative;
+
+        .circle {
+          background: $dark-violet;
+          @include _make-circle(80);
+          position: absolute;
+          top: 10%;
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+
+        &>div {
+          background: #fff;
+          width: 300px;
+          height: 200px;
+          padding: 50px 20px 30px;
+
+          h5 {
+            @include font("Poppins Bold");
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+            margin-top: 16px;
+          }
+        }
+
+        .records {
+          margin-top: 75px;
+
+          .circle {
+            top: 20%;
+          }
+        }
+
+        .customizable {
+          margin-top: 150px;
+
+          .circle {
+            top: 30%;
+          }
+        }
       }
     }
   }
