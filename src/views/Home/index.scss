@@ -1,0 +1,154 @@
+.home {
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .text {
+            h1 {
+                @include font("Poppins Black");
+                @include font-size(55);
+            }
+            h6 {
+                color: $grayish-violet;
+                font-size: 16px;
+            }
+            button {
+                margin: 23px 0;
+                padding: 12px 24px;
+                font-size: 20px;
+            }
+        }
+        .image {
+            text-align: right;
+            img {
+                width: 70%;
+            }
+        }
+    }
+    
+    .main {
+        position: relative;
+        .input {
+            background: {
+                image: url("../../assets/images/bg-shorten-desktop.svg");
+                color: $dark-violet;
+            }
+            height: 95px;
+            max-width: 96%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 50px 30px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            top: -50px;
+            
+            input {
+                width: 80%;
+                padding: 14px;
+                border-radius: 6px;
+                border: none;
+                @include font("Poppins Bold");
+                
+                @include placeholder {
+                    @include font("Poppins Bold");
+                    color: $grayish-violet;
+                }
+            }
+            button {
+                padding: 12px 26px;
+                border-radius: 6px;
+            }
+        }
+        
+        .statistics {
+            text-align: center;
+            padding: 115px 0;
+            background: #efefef;
+            width: 100vw;
+            position: relative;
+            left: calc(50% - 50vw);
+            margin-top: 50px;
+            h1 {
+                @include font("Poppins Bold");
+            }
+            p {
+                color: $gray;
+            }
+            
+            .cards {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 100px;
+                position: relative;
+                
+                .circle {
+                    background: $dark-violet;
+                    @include _make-circle(80);
+                    position: absolute;
+                    top: 10%;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                
+                &>div {
+                    background: #fff;
+                    width: 300px;
+                    height: 200px;
+                    padding: 50px 20px 30px;
+                    
+                    h5 {
+                        @include font("Poppins Bold");
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 14px;
+                        margin-top: 16px;
+                    }
+                }
+                
+                .records {
+                    margin-top: 75px;
+                    
+                    .circle {
+                        top: 20%;
+                    }
+                }
+                
+                .customizable {
+                    margin-top: 150px;
+                    
+                    .circle {
+                        top: 30%;
+                    }
+                }
+            }
+        }
+    }
+    .foot {
+        background: {
+            image: url("../../assets/images/bg-boost-desktop.svg");
+            color: $dark-violet;
+        }
+        text-align: center;
+        padding: 30px;
+
+        h1 {
+            color: #fff;
+            @include font("Poppins Bold");
+            margin-bottom: 12px;
+        }
+
+        button {
+            padding: 12px 46px;
+        }
+    }
+}
