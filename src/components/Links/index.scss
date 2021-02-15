@@ -1,0 +1,25 @@
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 70%;
+    height: 60px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+
+    .right {
+        display: flex;
+        width: 25%;
+        justify-content: space-between;
+
+        p {
+            color: $cyan;
+        }
+
+        button {
+            border-radius: 4px;
+        }
+    }
+}

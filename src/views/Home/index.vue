@@ -13,10 +13,13 @@
         </div>
       </div>
       <div class="main">
-        <div class="input">
-          <input type="text" placeholder="Shorten a link here...">
-          <button class="button-cyan">Shorten It!</button>
-        </div>
+        <form class="input">
+          <input type="text" placeholder="Shorten a link here..." v-model="inputLink">
+          <button class="button-cyan" @click.prevent="shortenLink">Shorten It!</button>
+        </form>
+
+        <Links />
+
 
         <div class="statistics">
           <h1>Advanced Statistics</h1>
@@ -72,6 +75,7 @@
       <h1>Boost your links today</h1>
       <button class="button-cyan">Get Started</button>
     </div>
+    <Footer />
   </div>
 </template>
 
